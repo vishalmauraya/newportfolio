@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Vishal Kumar | Flutter Developer & Mobile/Frontend Engineer Portfolio</title>
+  <meta name="title" content="Vishal Kumar | Flutter Developer & Mobile/Frontend Engineer Portfolio">
+  <meta name="description" content="Explore the interactive portfolio of Vishal Kumar, a Flutter Developer specializing in high-performance cross-platform mobile & web applications, reactive state management (Riverpod/Bloc), real-time sensor streams, and pixel-perfect UIs.">
+  <meta name="keywords" content="Vishal Kumar, Flutter Developer, Mobile Engineer, Dart, Riverpod, Bloc, Firebase, Flutter Web, Portfolio, Lucknow, India">
+  <meta name="author" content="Vishal Kumar">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vishalmauraya.github.io/">
+  <meta property="og:title" content="Vishal Kumar | Flutter Developer & Mobile/Frontend Engineer Portfolio">
+  <meta property="og:description" content="Explore live interactive mobile app simulators (Driver Quest, Yatri Cabs, Weather App), skills matrix, experience timeline, and DevTools CLI.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Vishal Portfolio">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      background-color: #0A0E1A;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    #loading-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at center, #121829 0%, #0A0E1A 100%);
+      z-index: 9999;
+      color: #FFFFFF;
+      transition: opacity 0.5s ease-out;
+    }
+
+    .spinner-ring {
+      width: 58px;
+      height: 58px;
+      border: 3px solid rgba(0, 242, 254, 0.15);
+      border-top: 3px solid #00F2FE;
+      border-right: 3px solid #7F00FF;
+      border-radius: 50%;
+      animation: spin 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+      margin-bottom: 20px;
+    }
+
+    .loading-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 50%, #7F00FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .loading-sub {
+      font-size: 13px;
+      color: #94A3B8;
+      font-family: 'Inter', sans-serif;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Preloader Splash Screen -->
+  <div id="loading-indicator">
+    <div class="spinner-ring"></div>
+    <div class="loading-title">Vishal Kumar</div>
+    <div class="loading-sub">Initializing Flutter Web Portfolio...</div>
+  </div>
+
+  <script>
+    window.addEventListener('load', function() {
+      var loader = document.getElementById('loading-indicator');
+      if (loader) {
+        setTimeout(function() {
+          loader.style.opacity = '0';
+          setTimeout(function() { loader.remove(); }, 500);
+        }, 800);
+      }
+    });
+  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
